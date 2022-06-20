@@ -14,9 +14,12 @@ const SideBar = () => {
         </div>
     )
 }
-const SidebarIcon = ({icon}) => (
-    <div className="sidebar-icon">
+const SidebarIcon = ({icon, text = "tooltip"}) => (
+    <div className="sidebar-icon group">
     {icon}
-    </div>
+    <span class="sidebar-tooltip group-hover:scale-100">
+      {text}
+    </span>
+  </div>
 )
 export default SideBar
